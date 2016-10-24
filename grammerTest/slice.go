@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 /*
-Go 语言切片是对数组的抽象。
+Go 语言切片是对数组的抽象。是引用类型，可以理解为指向数组的指针
 Go 数组的长度不可改变，在特定场景中这样的集合就不太适用，Go中提供了一种灵活，
 功能强悍的内置类型切片("动态数组"),与数组相比切片的长度是不固定的，可以追加元素，在追加时可能使切片的容量增大。
  */
@@ -34,6 +34,21 @@ func main() {
 	var numbers_new = make([]int,len(numbers),cap(numbers)*2)
 	copy(numbers_new,numbers)
 	printSlice(numbers_new)
+
+	fmt.Println("----------------------------------------------------")
+	arr1 := []int{1,2,3,4,5}
+	fmt.Println("原数组：",arr1)
+	sl1 := arr1[2:]
+	fmt.Println("sl1=",sl1)
+	sl2 := arr1[3:]
+	fmt.Println("sl2=",sl2)
+
+	sl2[1] = 8 //原数组，sl1都被改变
+	fmt.Println("arr1 = ",arr1)
+	fmt.Println("sl1 = ",sl1)
+	fmt.Println("sl2 = ",sl2)
+
+
 }
 func printSlice(x []int){
 	fmt.Printf("len=%d cap=%d slice=%v\n",len(x),cap(x),x)

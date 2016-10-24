@@ -68,6 +68,9 @@ func main() {
 	fmt.Printf("你的等级是 %s\n", grade );
 
 
+	arr1 := [...]int{3,4,5}
+	fmt.Println(arr1[1],len(arr1))
+
 
 
 
