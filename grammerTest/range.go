@@ -18,6 +18,7 @@ func main() {
 		if(3 == num){
 			println("index is ",i)
 		}
+		fmt.Println("num = ",num)
 	}
 
 	//range在map中的使用
