@@ -1,6 +1,10 @@
 package main
 
 import "fmt"
+
+
+
+import "fmt"
 /*
 执行方式类似其它语言中的析构函数
 即使函数发生严重错误也会执行
